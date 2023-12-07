@@ -11,6 +11,10 @@
 		18DA15D02B20485C0007FD5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15CF2B20485C0007FD5A /* ContentView.swift */; };
 		18DA15D22B20485D0007FD5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA15D12B20485D0007FD5A /* Assets.xcassets */; };
 		18DA15D52B20485D0007FD5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA15D42B20485D0007FD5A /* Preview Assets.xcassets */; };
+		18DA15DD2B2048950007FD5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15DC2B2048950007FD5A /* ViewModel.swift */; };
+		18DA15DF2B2048A50007FD5A /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15DE2B2048A50007FD5A /* StopWatchView.swift */; };
+		18F2BE162B204BD3008F3B22 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F2BE152B204BD3008F3B22 /* Modifiers.swift */; };
+		18F2BE1A2B209237008F3B22 /* LapRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		18DA15CF2B20485C0007FD5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18DA15D12B20485D0007FD5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DA15D42B20485D0007FD5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18DA15DC2B2048950007FD5A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		18DA15DE2B2048A50007FD5A /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
+		18F2BE152B204BD3008F3B22 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LapRecord.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,13 @@
 		18DA15CC2B20485C0007FD5A /* stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				18F2BE142B204BB8008F3B22 /* New Group */,
+				18DA15DB2B20486A0007FD5A /* Module */,
 				18DA15CD2B20485C0007FD5A /* stopwatchApp.swift */,
 				18DA15CF2B20485C0007FD5A /* ContentView.swift */,
 				18DA15D12B20485D0007FD5A /* Assets.xcassets */,
 				18DA15D32B20485D0007FD5A /* Preview Content */,
+				18F2BE152B204BD3008F3B22 /* Modifiers.swift */,
 			);
 			path = stopwatch;
 			sourceTree = "<group>";
@@ -65,6 +76,23 @@
 				18DA15D42B20485D0007FD5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18DA15DB2B20486A0007FD5A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				18DA15DC2B2048950007FD5A /* ViewModel.swift */,
+				18DA15DE2B2048A50007FD5A /* StopWatchView.swift */,
+				18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		18F2BE142B204BB8008F3B22 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DA15D02B20485C0007FD5A /* ContentView.swift in Sources */,
+				18DA15DD2B2048950007FD5A /* ViewModel.swift in Sources */,
+				18DA15DF2B2048A50007FD5A /* StopWatchView.swift in Sources */,
 				18DA15CE2B20485C0007FD5A /* stopwatchApp.swift in Sources */,
+				18F2BE1A2B209237008F3B22 /* LapRecord.xcdatamodeld in Sources */,
+				18F2BE162B204BD3008F3B22 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +376,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */,
+			);
+			currentVersion = 18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */;
+			path = LapRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18DA15C22B20485C0007FD5A /* Project object */;
 }
