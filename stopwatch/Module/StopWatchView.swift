@@ -2,10 +2,11 @@
 //  StopWatchView.swift
 //  stopwatch
 //
-//  Created by Apple on 06/12/23.
+//  Created by Kashif on 06/12/23.
 //
 
 import SwiftUI
+import CoreData
 
 struct StopWatchView: View {
     @ObservedObject var viewModel=StopWatchViewModel()
@@ -13,57 +14,43 @@ struct StopWatchView: View {
         VStack{
             Text("\(viewModel.formattedString())")
                 .font(.system(size: 36))
-            //            HStack{
-            //                VStack(alignment: .center, spacing: 8) {
-            //                    Text("00")
-            //                        .font(.system(size: 36))
-            //                        .multilineTextAlignment(.center)
-            //                }
-            //                .blockStyle()
-            //                Text(":")
-            //                    .font(.system(size: 36))
-            //                VStack(alignment: .center, spacing: 8) {
-            //                    Text("00")
-            //                        .font(.system(size: 36))
-            //                        .multilineTextAlignment(.center)
-            //                }
-            //                .blockStyle()
-            //                Text(":")
-            //                    .font(.system(size: 36))
-            //                VStack(alignment: .center, spacing: 8) {
-            //                    Text("00")
-            //                        .font(.system(size: 36))
-            //                        .multilineTextAlignment(.center)
-            //                }
-            //                .blockStyle()
-            //            }
+                .blockStyle()
+                .padding(.top,20)
             
             HStack{
-                SaveLap(imageName: "stop.fill"){
-                    viewModel.startStopwatch(mode: .reset)
-                }
-                PlayButton(imageName: viewModel.mode == .start ? "play.fill" : "pause.fill"){
-                    if viewModel.mode == .start{
-                        viewModel.startStopwatch(mode: .start)
-                    } else{
-                        viewModel.startStopwatch(mode: .pause)
+                VStack{
+                    SaveLap(imageName: "stop.fill"){
+                        viewModel.startStopwatch(mode: .reset)
                     }
+                    Text("Reset")
+                        .font(.system(size: 10))
+                        .padding(.top,5)
                 }
-                
-                SaveLap(imageName: "flag", isDisabled: viewModel.mode == .start ? .start : .pause){
-                    viewModel.startStopwatch(mode: .lap)
+                VStack{
+                    PlayButton(imageName: viewModel.mode == .start ? "play.fill" : "pause.fill"){
+                        if viewModel.mode == .start{
+                            viewModel.startStopwatch(mode: .start)
+                        } else{
+                            viewModel.startStopwatch(mode: .pause)
+                        }
+                    }
+                    Text("Start/Pause")
+                        .font(.system(size: 10))
+                        .padding(.top,5)
                 }
-            }.padding(.top,50)
-                List(viewModel.lapTimes){item in
-                    Text(item.lapTimes)
-                        .foregroundColor(.blue)
+                VStack{
+                    SaveLap(imageName: "flag", isDisabled: viewModel.mode == .start ? .start : .pause){
+                        viewModel.saveLap()
+                    }
+                    Text("Lap")
+                        .font(.system(size: 10))
+                        .padding(.top,5)
                 }
-                .background(.clear)
-            
-            
-            
-            
-            
+            }.padding(.top,30)
+            List(viewModel.lapTimes, id:\.self){item in
+                Text((item.lapTime ?? "")+" s")
+                    .foregroundColor(.blue)
+            }
         }.padding([.leading,.trailing],20)
     }
 }
@@ -99,7 +86,7 @@ struct PlayButton:View{
         
     }
 }
-//E9E4E3
+
 struct SaveLap:View{
     var imageName:String
     var isDisabled:Mode?=nil

@@ -14,7 +14,7 @@
 		18DA15DD2B2048950007FD5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15DC2B2048950007FD5A /* ViewModel.swift */; };
 		18DA15DF2B2048A50007FD5A /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA15DE2B2048A50007FD5A /* StopWatchView.swift */; };
 		18F2BE162B204BD3008F3B22 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F2BE152B204BD3008F3B22 /* Modifiers.swift */; };
-		18F2BE1A2B209237008F3B22 /* LapRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */; };
+		18F2BE1D2B21F2B8008F3B22 /* LapRecordTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F2BE1B2B21F2B8008F3B22 /* LapRecordTable.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		18DA15DC2B2048950007FD5A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		18DA15DE2B2048A50007FD5A /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		18F2BE152B204BD3008F3B22 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
-		18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LapRecord.xcdatamodel; sourceTree = "<group>"; };
+		18F2BE1C2B21F2B8008F3B22 /* LapRecordTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LapRecordTable.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,6 @@
 		18DA15CC2B20485C0007FD5A /* stopwatch */ = {
 			isa = PBXGroup;
 			children = (
-				18F2BE142B204BB8008F3B22 /* New Group */,
 				18DA15DB2B20486A0007FD5A /* Module */,
 				18DA15CD2B20485C0007FD5A /* stopwatchApp.swift */,
 				18DA15CF2B20485C0007FD5A /* ContentView.swift */,
@@ -83,16 +82,9 @@
 			children = (
 				18DA15DC2B2048950007FD5A /* ViewModel.swift */,
 				18DA15DE2B2048A50007FD5A /* StopWatchView.swift */,
-				18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */,
+				18F2BE1B2B21F2B8008F3B22 /* LapRecordTable.xcdatamodeld */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		18F2BE142B204BB8008F3B22 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +161,7 @@
 				18DA15DD2B2048950007FD5A /* ViewModel.swift in Sources */,
 				18DA15DF2B2048A50007FD5A /* StopWatchView.swift in Sources */,
 				18DA15CE2B20485C0007FD5A /* stopwatchApp.swift in Sources */,
-				18F2BE1A2B209237008F3B22 /* LapRecord.xcdatamodeld in Sources */,
+				18F2BE1D2B21F2B8008F3B22 /* LapRecordTable.xcdatamodeld in Sources */,
 				18F2BE162B204BD3008F3B22 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,13 +372,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		18F2BE182B209237008F3B22 /* LapRecord.xcdatamodeld */ = {
+		18F2BE1B2B21F2B8008F3B22 /* LapRecordTable.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */,
+				18F2BE1C2B21F2B8008F3B22 /* LapRecordTable.xcdatamodel */,
 			);
-			currentVersion = 18F2BE192B209237008F3B22 /* LapRecord.xcdatamodel */;
-			path = LapRecord.xcdatamodeld;
+			currentVersion = 18F2BE1C2B21F2B8008F3B22 /* LapRecordTable.xcdatamodel */;
+			path = LapRecordTable.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

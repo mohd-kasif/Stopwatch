@@ -2,7 +2,7 @@
 //  Modifiers.swift
 //  stopwatch
 //
-//  Created by Apple on 06/12/23.
+//  Created by Kashif on 06/12/23.
 //
 
 import Foundation
@@ -12,8 +12,9 @@ struct borderModifier:ViewModifier{
     func body(content: Content) -> some View {
         content
             .padding(10)
-            .frame(width: 70, alignment: .topLeading)
+            .frame(width:180, alignment: .topLeading)
             .cornerRadius(10)
+            .multilineTextAlignment(.center)
             .overlay(
             RoundedRectangle(cornerRadius: 10)
             .inset(by: 0.5)

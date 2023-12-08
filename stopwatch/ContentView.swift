@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  stopwatch
 //
-//  Created by Apple on 06/12/23.
+//  Created by Kashif on 06/12/23.
 //
 
 import SwiftUI
@@ -12,7 +12,6 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
