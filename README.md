@@ -33,7 +33,7 @@ This SwiftUI-based stopwatch app allows users to measure time, record lap times,
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/stopwatch-app.git
+    git clone https://github.com/mohd-kasif/stopwatch-app.git
     ```
 
 2. Open the project in Xcode.
