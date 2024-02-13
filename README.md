@@ -1,6 +1,6 @@
 # Stopwatch App
 
-A simple stopwatch app built using SwiftUI and Core Data.
+A fully functional stopwatch app built using SwiftUI and Core Data.
 
 ## Table of Contents
 
